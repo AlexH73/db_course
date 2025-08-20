@@ -93,4 +93,25 @@ SELECT bewohner.name FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND
 -- Запрос для получения количества золота в деревне 'Gurkendorf'
 SELECT SUM(bewohner.gold) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Gurkendorf';
 
+-- Запрос для получения количества золота у жителей, которые являются торговцами, купцами или пекарями
+SELECT SUM(gold) FROM bewohner WHERE beruf IN ('Haendler', 'Kaufmann', 'Baecker');
+
+-- Запрос для получения суммы и среднего количества золота у жителей по профессиям
+SELECT beruf, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY beruf ORDER BY AVG(bewohner.gold);
+
+-- Запрос для получения среднего количества золота у жителей по статусам
+SELECT status, AVG(bewohner.gold) FROM bewohner GROUP BY status ORDER BY AVG(bewohner.gold);
+
+-- Запрос для удаления жителя с именем 'Dirty Dieter'
+DELETE FROM bewohner WHERE name = 'Dirty Dieter';
+
+-- Запрос для удаления жителя с именем 'Dirty Doerthe'
+DELETE FROM bewohner WHERE name = 'Dirty Doerthe';
+
+-- Запрос для изменения статуса жителя с идентификатором 8 - освобождение пилота
+UPDATE bewohner SET status = 'friedlich' WHERE bewohnernr = 8;
+
+-- Запрос для изменения статуса жителя с идентификатором 20 - летим домой 😁
+UPDATE bewohner SET status = 'ausgewandert' WHERE bewohnernr = 20;
+
 ```
