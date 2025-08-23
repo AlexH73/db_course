@@ -1,9 +1,9 @@
 # 🗄️ Учебный курс по базам данных
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-✓-blue?logo=docker)
-![Beekeeper Studio](https://img.shields.io/badge/Beekeeper_Studio-✓-lightgrey)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-blue?logo=postgresql)](https://www.postgresql.org/download/)
+[![Docker](https://img.shields.io/badge/Docker-✓-blue?logo=docker)](https://www.docker.com/get-started)
+[![Beekeeper Studio](https://img.shields.io/badge/Beekeeper_Studio-✓-yellow?logo=beekeeperstudio)](https://www.beekeeperstudio.io/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Структурированные материалы для изучения основ работы с базами данных, PostgreSQL и инструментами разработки.
 
